@@ -198,6 +198,15 @@ if(token === null) {
     getTasks()
 }
 
+// Identificando tecla enter
+
+novaTarefa.addEventListener('keypress', event=>{
+    if(event.which == 13){
+        event.preventDefault()
+        createTask()
+    }
+})
+
 
 createTaskButtonElement.addEventListener('click', event => {
 
