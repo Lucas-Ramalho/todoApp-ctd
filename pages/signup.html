@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+
+  <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
+  <link rel="stylesheet" href="./../styles/acesso.css">
+
+</head>
+
+<body>
+
+  <div class="left">
+    <img src="./../assets/pessoa-signup.png" alt="">
+  </div>
+  
+  <div class="right">
+   <form>
+      <div class="form-header">
+        <p>To-Do App</p>
+      </div>
+
+      <div class="form-control">
+
+        <label for="firstName">Name</label>
+        <input type="text" id="firstName" minlength="2" required>
+        <small>Forneça um nome válido</small>
+
+      </div>
+      
+      <div class="form-control">
+
+        <label for="lastName">Sobrenome:</label>
+        <input type="text" id="lastName" minlength="2" required>
+        <small>Forneça um Sobrenome válido</small>
+
+      </div>
+      
+      <div class="form-control">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" required>
+        <small>Forneça um e-mail válido</small>
+
+      </div>
+    
+      <div class="form-control">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" onchange='confereSenha();' minlength="8" required>
+        <small>Forneça um senha válido</small>
+
+      </div>
+      
+      <div class="form-control">
+
+        <label for="passwordConfirm">Password Confirm</label>
+        <input type="password" id="passwordConfirm" onchange='confereSenha();' minlength="8" required>
+        <small>Forneça um confirmação de senha válido</small>
+
+      </div> 
+      
+
+      
+      <button type="submit" id="createUserButton">Criar conta</button>
+   </form>
+
+    <div class="ingressar">
+      <a href="./../index.html">Já possui conta? Acesse aqui</a>
+    </div>
+
+  </div>
+
+    <!-- ---------------------- lógica aplicada no registro -------------------- -->
+    <script src="./../scripts/utils.js"></script>
+    <script src="./../scripts/signup.js"></script>
+
+</body>
+
+</html>
